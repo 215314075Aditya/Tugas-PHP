@@ -1,0 +1,45 @@
+
+.box{
+    position:inherit;
+    margin-bottom: 80px auto;
+    width: 500px;
+    height: 500 px;
+    top : 30%;
+    left: 30%;
+    display: flex;
+    justify-content: center;
+    background:#000;
+    border-radius: 5px;
+    overflow:  hidden;
+}
+
+.box h1{
+    color: #38ed38;
+    font-size: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.box::after{
+    content: "";
+    position: absolute;
+    background: #000;
+    inset: 10px;
+}
+
+.box::before{
+    content:"";
+    position: absolute;
+    width: 900px;
+    height: 140%;
+    background: linear-gradient(#00ccff,#d400d4);
+    animation: animate 4s linear infinite ;
+}
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(8deg);
+    }
+    100%
+    }
